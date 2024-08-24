@@ -12,13 +12,13 @@ Welcome to the Natural Language Processing (NLP) Web Tool project! This project 
 7. [API Setup](#api-setup)
 8. [Testing](#testing)
 9. [Service Workers](#service-workers)
-10. [License](#license)
+10. [Deployment](#deployment)
 
 
 ## Project Overview
 In this project, you will create a web-based tool that leverages Natural Language Processing to analyze articles and blog posts from various websites. The application will provide users with insights into the content's subjectivity, tone, and other linguistic attributes.
 
-The primary goal of this project is to simulate a real-world front-end development environment, exposing you to common tools and technologies used in the industry. While the specific setup may vary in professional settings, understanding the core components and their roles in the overall architecture is crucial.
+The primary goal of this project is to simulate a real-world front-end development environment, giving you hands-on experience with tools and technologies commonly used in the industry. You will practice setting up Webpack, integrating Sass for styling, and utilizing Webpack loaders and plugins. Additionally, you will work on creating layouts and page designs, implementing service workers, and making requests to external APIs.
 
 
 ## Key Features
@@ -98,11 +98,53 @@ The project is organized as follows:
 4. Update src/index.js to use the API key:
 
     require('dotenv').config();
+    
     const apiKey = process.env.API_KEY;
 
 5. Use the apiKey variable when making API requests.
+    
     Add .env to your .gitignore file:
+    
     .env
 
 This setup allows secure management of your API key while keeping it out of version control.
 
+
+## Testing
+This project uses Jest for unit testing. Jest is a powerful JavaScript testing framework that ensures our code is working as expected.
+
+### Setup
+
+1. Jest is included in the project dependencies. If not already installed, you can add it by running:
+   ```bash
+   npm install --save-dev jest
+
+2. In package.json, ensure you have a test script:
+    
+    "scripts": {
+    
+    "test": "jest"
+}
+
+3. Running Tests
+To run all tests, use the following command:
+    ```bash
+    npm run test
+
+## Service Workers
+This project implements Service Workers to enable offline functionality, ensuring that the application remains accessible even when the network is unavailable. We use Google Workbox in conjunction with Webpack to simplify the implementation of Service Workers.
+
+### Implementation
+
+1. **Workbox Plugin**: We use the Workbox Webpack Plugin to generate a service worker file automatically.
+
+2. **Webpack Configuration**: The `webpack.prod.js` file is configured to include the Workbox plugin:
+
+   ```javascript
+   const WorkboxPlugin = require('workbox-webpack-plugin');
+
+   // In the plugins array:
+   new WorkboxPlugin.GenerateSW()
+   
+## Deployment
+To deploy the application, build the production files and upload the contents of the dist/ directory to your web server.
