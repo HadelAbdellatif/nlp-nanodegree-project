@@ -1,0 +1,61 @@
+body {
+    background-image: url("../assets/nlp.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 40px;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #C0DBED;
+    border: 1px solid #C0DBED;
+    border-radius: 5px;
+    width: 20%;
+    height: 25px;
+}
+
+.error {
+    border: 2px solid red;
+    box-shadow: 0 0 5px red; 
+    outline: none; 
+    padding: 5px; 
+    background-color: rgb(241, 177, 177);
+}
+
+.result-section strong {
+    font-size: 20px;
+}
+
+.result-section #results {
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.result-section #results li {
+    padding-top: 12px;
+}
+
+.error-section {
+    display: none;
+    color: red;
+}
+
+#error-msg {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+#error-tile{
+    font-size: 20px;
+}

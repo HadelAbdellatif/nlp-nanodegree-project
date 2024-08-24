@@ -1,0 +1,108 @@
+# Project Name: Evaluate a News Article with Natural Language Processing
+
+Welcome to the Natural Language Processing (NLP) Web Tool project! This project is part of the Udacity Front-End Web Developer Nanodegree Program and is designed to give you hands-on experience with a range of web development tools and technologies.
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Key Features](#key-features)
+3. [Technology Stack](#technology-stack)
+4. [Installation](#installation)
+5. [Project Structure](#project-structure)
+6. [Usage](#usage)
+7. [API Setup](#api-setup)
+8. [Testing](#testing)
+9. [Service Workers](#service-workers)
+10. [License](#license)
+
+
+## Project Overview
+In this project, you will create a web-based tool that leverages Natural Language Processing to analyze articles and blog posts from various websites. The application will provide users with insights into the content's subjectivity, tone, and other linguistic attributes.
+
+The primary goal of this project is to simulate a real-world front-end development environment, exposing you to common tools and technologies used in the industry. While the specific setup may vary in professional settings, understanding the core components and their roles in the overall architecture is crucial.
+
+
+## Key Features
+
+- Setting up Webpack and configuring development and production environments
+- Integrating Sass for styling
+- Using Webpack loaders and plugins for handling different assets
+- Making requests to the MeaningCloud API for sentiment analysis
+- Ensuring offline functionality with Service Workers
+- Writing unit tests using Jest
+
+## Technology Stack
+
+- **Backend**: Node.js with Express framework
+- **Frontend**: 
+  - HTML
+  - CSS
+  - JavaScript
+  - Sass (for advanced styling)
+- **Build Tool**: Webpack (configured for both development and production environments)
+- **API**: MeaningCloud API for text analysis
+- **Additional**: 
+  - Service Worker for offline functionality
+  
+## Installation
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://HadelAbdellatif/nlp-nanodegree-project
+   cd nlp-nanodegree-project
+   
+
+2. Install dependencies:
+    ```bash
+    npm install
+
+3. Set up Webpack:
+Ensure that your webpack.dev.js and webpack.prod.js files are correctly configured. 
+
+4. Run the development server:
+    ```bash
+    npm run build-dev
+
+5. Build the production files:
+    ```bash
+    npm run build-prod   
+
+These commands will set up the project on your local machine and prepare it for both development and production use.
+
+## Project Structure
+The project is organized as follows:
+
+- `src/`: Contains the source code for the project.
+  - `index.js`: The entry point for the application.
+  - `styles/`: Contains Sass files for styling.
+  - `service-worker.js`: Service Worker file for offline functionality.
+- `dist/`: The directory where the production build is output.
+- `webpack.config.js`: The Webpack configuration file.
+- `tests/`: Contains unit tests.
+
+## Usage
+1. Open the application in your browser.
+2. Enter the URL of the news article you want to analyze.
+3. Click the "Analyze" button to see the sentiment analysis results.
+
+## API Setup
+1. Sign up for an API key from [MeaningCloud](https://www.meaningcloud.com/developer/create-account).
+
+2. Create a `.env` file in the root directory of your project and add your API key:
+    API_KEY=your-meaningcloud-api-key
+    
+3. Install the dotenv package to load environment variables:
+    ```bash
+    npm install dotenv
+    
+4. Update src/index.js to use the API key:
+
+    require('dotenv').config();
+    const apiKey = process.env.API_KEY;
+
+5. Use the apiKey variable when making API requests.
+    Add .env to your .gitignore file:
+    .env
+
+This setup allows secure management of your API key while keeping it out of version control.
+
