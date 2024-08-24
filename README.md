@@ -89,6 +89,7 @@ The project is organized as follows:
 1. Sign up for an API key from [MeaningCloud](https://www.meaningcloud.com/developer/create-account).
 
 2. Create a `.env` file in the root directory of your project and add your API key:
+    ```text
     API_KEY=your-meaningcloud-api-key
     
 3. Install the dotenv package to load environment variables:
@@ -97,14 +98,15 @@ The project is organized as follows:
     
 4. Update src/index.js to use the API key:
 
+    ```javascript
     require('dotenv').config();
     
     const apiKey = process.env.API_KEY;
 
 5. Use the apiKey variable when making API requests.
-    
-    Add .env to your .gitignore file:
-    
+
+6. Add .env to your .gitignore file:
+    ```text
     .env
 
 This setup allows secure management of your API key while keeping it out of version control.
@@ -121,6 +123,7 @@ This project uses Jest for unit testing. Jest is a powerful JavaScript testing f
 
 2. In package.json, ensure you have a test script:
     
+    ```json
     "scripts": {
     
     "test": "jest"
@@ -148,13 +151,14 @@ This project implements Service Workers to enable offline functionality, ensurin
    
 3. Service Worker Registration: The service worker is registered in the index.html file:
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js');
-    });
-  }
-</script>
+    ```xml
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+    </script>
 
 ## Deployment
 To deploy the application, build the production files and upload the contents of the dist/ directory to your web server.
