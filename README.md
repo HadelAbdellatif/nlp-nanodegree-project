@@ -146,5 +146,15 @@ This project implements Service Workers to enable offline functionality, ensurin
    // In the plugins array:
    new WorkboxPlugin.GenerateSW()
    
+3. Service Worker Registration: The service worker is registered in the index.html file:
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
+
 ## Deployment
 To deploy the application, build the production files and upload the contents of the dist/ directory to your web server.
