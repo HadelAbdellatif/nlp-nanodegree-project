@@ -2,6 +2,17 @@
 
 Welcome to the Natural Language Processing (NLP) Web Tool project! This project is part of the Udacity Front-End Web Developer Nanodegree Program and is designed to give you hands-on experience with a range of web development tools and technologies.
 
+## Development Environment
+
+This project is developed using:
+
+- Node.js: v20.15.1
+
+To check your Node.js version, run the following command in your terminal:
+
+    ```bash
+    node -v
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Key Features](#key-features)
@@ -114,6 +125,8 @@ This setup allows secure management of your API key while keeping it out of vers
 
 ## Testing
 This project uses Jest for unit testing. Jest is a powerful JavaScript testing framework that ensures our code is working as expected.
+    ```bash
+    npm run test 
 
 ### Setup
 
@@ -127,7 +140,7 @@ This project uses Jest for unit testing. Jest is a powerful JavaScript testing f
     "scripts": {
     
     "test": "jest"
-}
+    }
 
 3. Running Tests
 To run all tests, use the following command:

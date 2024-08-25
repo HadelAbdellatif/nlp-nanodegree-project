@@ -3,7 +3,6 @@ import { checkUrlValidation } from './urlValidation'
 
 const serverURL = 'https://localhost:8000/api'
 
-const form = document.getElementById('urlForm');
 const scoreTag = document.querySelector(".score_tag");
 const agreement = document.querySelector(".agreement");
 const text = document.querySelector(".text");
@@ -72,4 +71,3 @@ function sendData (url){
 
 // Export the handleSubmit function
 export { handleSubmit };
-
