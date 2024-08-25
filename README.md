@@ -10,7 +10,7 @@ This project is developed using:
 
 To check your Node.js version, run the following command in your terminal:
 
-   ```bash
+    ```bash
     node -v
 
 ## Table of Contents
